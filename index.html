@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>São Paulo Inteligente: Inovação para o Futuro da Cidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  ><link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+      <h1>São Paulo Inteligente</h1>
+    </div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#engajamento">Engajamento</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#investidores">Parcerias</a>
+    </nav>
+  </header>
+
+  <!-- Página Inicial -->
+  <section id="inicio" class="hero">
+    <h2>São Paulo Inteligente: Inovação para o Futuro da Cidade</h2>
+    <p>Conectando tecnologia, sustentabilidade e cidadania para transformar São Paulo em uma cidade mais eficiente, limpa e humana.</p>
+
+    <div class="pilares">
+      <span class="pilar">Mobilidade</span>
+      <span class="pilar">Sustentabilidade</span>
+      <span class="pilar">Saúde</span>
+      <span class="pilar">Gestão de Resíduos</span>
+      <span class="pilar">Qualidade de Vida</span>
+    </div>
+
+    <div class="hero-video">
+      <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"></video>
+    </div>
+  </section>
+
+  <!-- Seção de Destaques -->
+
+  <!-- Mapa Interativo -->
+  <section id="mapa">
+    <h2>Mapa Interativo de Projetos</h2>
+    <div class="map-filters" style="
+      margin-bottom:16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 12px #0004;
+      ">
+      <label><input type="checkbox" class="filtro-mapa" value="ecoponto" checked> Ecopontos</label>
+      <label><input type="checkbox" class="filtro-mapa" value="ciclovia" checked> Ciclovias Solares</label>
+      <label><input type="checkbox" class="filtro-mapa" value="totem" checked> Totens de Saúde</label>
+      <label><input type="checkbox" class="filtro-mapa" value="bike" checked> Bicicletas Compartilhadas</label>
+      <label><input type="checkbox" class="filtro-mapa" value="ar" checked> Monitoramento do Ar</label>
+      <label><input type="checkbox" class="filtro-mapa" value="hospital" checked> Hospitais</label>
+      <label><input type="checkbox" class="filtro-mapa" value="school" checked> Escolas</label>
+      <label><input type="checkbox" class="filtro-mapa" value="bus" checked> Transporte Público</label>
+      <label><input type="checkbox" class="filtro-mapa" value="park" checked> Parques</label>
+      <label><input type="checkbox" class="filtro-mapa" value="camera" checked> Câmeras</label>
+      <label><input type="checkbox" class="filtro-mapa" value="light" checked> Iluminação</label>
+      <label><input type="checkbox" class="filtro-mapa" value="wifi" checked> Wi-Fi Público</label>
+      <label><input type="checkbox" class="filtro-mapa" value="fire" checked> Bombeiros</label>
+      <label><input type="checkbox" class="filtro-mapa" value="police" checked> Polícia</label>
+    </div>
+    <div id="map"></div>
+    <p class="map-info">Clique nos ícones para ver detalhes em tempo real: ocupação de lixeiras, qualidade do ar, geração de energia e mais.</p>
+  </section>
+
+  <!-- Projetos Detalhados -->
+  <section id="projetos">
+    <h2>Projetos Detalhados</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Ecoponto Inteligente</h3>
+        <p><strong>Problema:</strong> Descarte irregular e baixa reciclagem.</p>
+        <p><strong>Solução:</strong> Sensores IoT monitoram nível e tipo de resíduo.</p>
+        <p><strong>Impacto:</strong> +40% na reciclagem e redução de lixo nas ruas.</p>
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Ecoponto">
+      </div>
+      <div class="card">
+        <h3>Ciclovia Solar</h3>
+        <p><strong>Problema:</strong> Baixa geração de energia limpa em áreas urbanas.</p>
+        <p><strong>Solução:</strong> Painéis solares integrados ao pavimento da ciclovia.</p>
+        <p><strong>Impacto:</strong> Energia para iluminação pública e carregadores de bikes.</p>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Ciclovia Solar">
+      </div>
+      <div class="card">
+        <h3>Totem de Saúde</h3>
+        <p><strong>Problema:</strong> Filas longas e acesso limitado à saúde básica.</p>
+        <p><strong>Solução:</strong> Totens com IA para triagem e orientação médica.</p>
+        <p><strong>Impacto:</strong> Atendimento rápido e desafogamento de UBS.</p>
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Totem de Saúde">
+      </div>
+    </div>
+  </section>
+
+  <!-- Engajamento -->
+  <section id="engajamento">
+    <h2>Engajamento do Cidadão</h2>
+    <p>Participe da transformação! Cadastre-se, descarte corretamente, ganhe pontos e ajude a construir uma cidade melhor.</p>
+    <form id="form-engajamento">
+      <input type="text" placeholder="Nome completo" required />
+      <input type="email" placeholder="E-mail" required />
+      <button type="submit">Cadastrar e Ganhar Pontos</button>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" style="position:relative;">
+    <button id="toggle-dashboard" class="dashboard-toggle-btn">Esconder Dashboard</button>
+    <div id="dashboard-content">
+      <h2>Dashboard em Tempo Real</h2>
+      <div class="card-container">
+        <div class="chart-card">
+          <h3>Poluição do Ar (PM2.5)</h3>
+          <canvas id="chartAr"></canvas>
+          <p>Índice atual: <strong>42 μg/m³</strong> (Bom)</p>
+        </div>
+        <div class="chart-card">
+          <h3>Lixo Reciclado</h3>
+          <canvas id="chartLixo"></canvas>
+          <p>Este mês: <strong>2.1 toneladas</strong></p>
+        </div>
+        <div class="chart-card">
+          <h3>Energia Solar Gerada</h3>
+          <canvas id="chartEnergia"></canvas>
+          <p>Hoje: <strong>120 kWh</strong></p>
+        </div>
+        <div class="chart-card">
+          <h3>Atendimentos em Totens</h3>
+          <canvas id="chartSaude"></canvas>
+          <p>Hoje: <strong>34 pessoas</strong></p>
+        </div>
+        <div class="chart-card">
+          <h3>Consumo de Água</h3>
+          <canvas id="chartAgua"></canvas>
+          <p>Hoje: <strong>850 m³</strong></p>
+        </div>
+        <div class="chart-card">
+          <h3>Trânsito (Tempo Médio)</h3>
+          <canvas id="chartTransito"></canvas>
+          <p>Tempo médio: <strong>32 min</strong></p>
+        </div>
+        <div class="chart-card">
+          <h3>Wi-Fi Público</h3>
+          <canvas id="chartWifi"></canvas>
+          <p>Usuários conectados: <strong>260</strong></p>
+        </div>
+        <div class="chart-card">
+          <h3>Segurança (Ocorrências)</h3>
+          <canvas id="chartSeguranca"></canvas>
+          <p>Ocorrências hoje: <strong>5</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investidores -->
+  <section id="investidores">
+    <h2>Investidores & Parcerias</h2>
+    <p>Empresas, startups e ONGs: integre-se aos projetos, financie soluções ou implante tecnologias em sua região.</p>
+    <form id="form-parceria">
+      <input type="text" placeholder="Nome da empresa" required />
+      <input type="email" placeholder="E-mail de contato" required />
+      <button type="submit">Quero Fazer Parte</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Projeto São Paulo Inteligente &copy; 2025 | Desenvolvido por SENAI & IPT</p>
+    <p>Plataforma de inovação urbana com foco em IoT, IA e participação cidadã.</p>
+  </footer>
+
+  <!-- Leaflet Map -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+  // Inicializa o mapa
+  const map = L.map('map').setView([-23.5505, -46.6333], 11);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Função para criar ícones personalizados com Font Awesome
+  function createIcon(iconClass, color) {
+    return L.divIcon({
+      html: `<i class="${iconClass} fa-2x" style="color: ${color};"></i>`,
+      className: 'map-marker-icon',
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -32],
+      tooltipAnchor: [16, -40]
+    });
+  }
+
+  // Ícones personalizados
+  const iconEcoponto = createIcon('fas fa-recycle', '#16a34a');
+  const iconCiclovia = createIcon('fas fa-solar-panel', '#f59e0b');
+  const iconTotem = createIcon('fas fa-heartbeat', '#ef4444');
+  const iconBike = createIcon('fas fa-bicycle', '#3b82f6');
+  const iconAr = createIcon('fas fa-wind', '#8b5cf6');
+  const iconHospital = createIcon('fas fa-hospital', '#e11d48');
+  const iconSchool = createIcon('fas fa-school', '#fbbf24');
+  const iconBus = createIcon('fas fa-bus', '#0ea5e9');
+  const iconPark = createIcon('fas fa-tree', '#22c55e');
+  const iconCamera = createIcon('fas fa-video', '#64748b');
+  const iconLight = createIcon('fas fa-lightbulb', '#facc15');
+  const iconWifi = createIcon('fas fa-wifi', '#3b82f6');
+  const iconFire = createIcon('fas fa-fire-extinguisher', '#ef4444');
+  const iconPolice = createIcon('fas fa-shield-alt', '#2563eb');
+
+  // Lista de marcadores enriquecidos
+  const pontos = [
+    // Ecopontos
+    { lat: -23.5505, lng: -46.6333, icon: iconEcoponto, popup: '<b>Ecoponto Central</b><br>Ocupação: 80%<br>Qualidade do ar: Boa', tooltip: 'Ecoponto Inteligente', tipo: 'ecoponto' },
+    { lat: -23.5200, lng: -46.6400, icon: iconEcoponto, popup: '<b>Ecoponto Vila Nova</b><br>Ocupação: 60%<br>Aceita: plástico, vidro, metal', tooltip: 'Ecoponto Inteligente', tipo: 'ecoponto' },
+    { lat: -23.5650, lng: -46.6550, icon: iconEcoponto, popup: '<b>Ecoponto Mooca</b><br>Ocupação: 45%<br>Aceita: papel, metal', tooltip: 'Ecoponto Inteligente', tipo: 'ecoponto' },
+    { lat: -23.5750, lng: -46.6200, icon: iconEcoponto, popup: '<b>Ecoponto Pinheiros</b><br>Ocupação: 90%<br>Aviso: coleta agendada', tooltip: 'Ecoponto Inteligente', tipo: 'ecoponto' },
+
+    // Ciclovias solares
+    { lat: -23.5678, lng: -46.6500, icon: iconCiclovia, popup: '<b>Ciclovia Solar - Av. Paulista</b><br>Energia gerada: 120 kWh', tooltip: 'Ciclovia Solar', tipo: 'ciclovia' },
+    { lat: -23.5800, lng: -46.6600, icon: iconCiclovia, popup: '<b>Ciclovia Solar - Zona Oeste</b><br>Energia gerada: 98 kWh', tooltip: 'Ciclovia Solar', tipo: 'ciclovia' },
+    { lat: -23.5450, lng: -46.6350, icon: iconCiclovia, popup: '<b>Ciclovia Solar - Centro</b><br>Energia gerada: 110 kWh', tooltip: 'Ciclovia Solar', tipo: 'ciclovia' },
+
+    // Totens de saúde
+    { lat: -23.5333, lng: -46.6167, icon: iconTotem, popup: '<b>Totem de Saúde - Vila Mariana</b><br>Atendimentos hoje: 34', tooltip: 'Totem de Saúde', tipo: 'totem' },
+    { lat: -23.5100, lng: -46.6000, icon: iconTotem, popup: '<b>Totem de Saúde - Santo Amaro</b><br>Atendimentos hoje: 28', tooltip: 'Totem de Saúde', tipo: 'totem' },
+    { lat: -23.5700, lng: -46.6100, icon: iconTotem, popup: '<b>Totem de Saúde - Barra Funda</b><br>Atendimentos hoje: 19', tooltip: 'totem' },
+
+    // Bicicletas compartilhadas
+    { lat: -23.5420, lng: -46.6310, icon: iconBike, popup: '<b>Estação Bike - República</b><br>Bicicletas disponíveis: 12', tooltip: 'Estação Bike', tipo: 'bike' },
+    { lat: -23.5550, lng: -46.6400, icon: iconBike, popup: '<b>Estação Bike - Liberdade</b><br>Bicicletas disponíveis: 7', tooltip: 'Estação Bike', tipo: 'bike' },
+
+    // Monitoramento do ar
+    { lat: -23.5700, lng: -46.6250, icon: iconAr, popup: '<b>Monitoramento do Ar - Perdizes</b><br>PM2.5: 42 μg/m³<br>Qualidade: Boa', tooltip: 'Monitor de Ar', tipo: 'ar' },
+    { lat: -23.5600, lng: -46.6700, icon: iconAr, popup: '<b>Monitoramento do Ar - Lapa</b><br>PM2.5: 55 μg/m³<br>Qualidade: Regular', tooltip: 'Monitor de Ar', tipo: 'ar' },
+
+    // Hospitais
+    { lat: -23.5500, lng: -46.6200, icon: iconHospital, popup: '<b>Hospital Municipal</b><br>Leitos disponíveis: 15', tooltip: 'Hospital', tipo: 'hospital' },
+    { lat: -23.5800, lng: -46.6400, icon: iconHospital, popup: '<b>Hospital Zona Oeste</b><br>Leitos disponíveis: 8', tooltip: 'Hospital', tipo: 'hospital' },
+
+    // Escolas
+    { lat: -23.5400, lng: -46.6500, icon: iconSchool, popup: '<b>Escola Municipal</b><br>Alunos: 420', tooltip: 'Escola', tipo: 'school' },
+    { lat: -23.5300, lng: -46.6300, icon: iconSchool, popup: '<b>Escola Estadual</b><br>Alunos: 380', tooltip: 'Escola', tipo: 'school' },
+
+    // Transporte público
+    { lat: -23.5600, lng: -46.6200, icon: iconBus, popup: '<b>Ponto de Ônibus - Centro</b><br>Próximo ônibus: 5 min', tooltip: 'Ônibus', tipo: 'bus' },
+    { lat: -23.5700, lng: -46.6400, icon: iconBus, popup: '<b>Ponto de Ônibus - Zona Oeste</b><br>Próximo ônibus: 2 min', tooltip: 'Ônibus', tipo: 'bus' },
+
+    // Parques
+    { lat: -23.5800, lng: -46.6200, icon: iconPark, popup: '<b>Parque Ibirapuera</b><br>Visitantes hoje: 1200', tooltip: 'Parque', tipo: 'park' },
+    { lat: -23.5400, lng: -46.6200, icon: iconPark, popup: '<b>Parque da Juventude</b><br>Visitantes hoje: 800', tooltip: 'Parque', tipo: 'park' },
+
+    // Câmeras de segurança
+    { lat: -23.5500, lng: -46.6400, icon: iconCamera, popup: '<b>Câmera de Segurança</b><br>Status: Online', tooltip: 'Câmera', tipo: 'camera' },
+    { lat: -23.5600, lng: -46.6300, icon: iconCamera, popup: '<b>Câmera de Segurança</b><br>Status: Online', tooltip: 'Câmera', tipo: 'camera' },
+    { lat: -23.5455, lng: -46.6380, icon: iconCamera, popup: '<b>Câmera de Segurança</b><br>Status: Offline', tooltip: 'Câmera', tipo: 'camera' },
+
+    // Iluminação pública
+    { lat: -23.5700, lng: -46.6500, icon: iconLight, popup: '<b>Poste Inteligente</b><br>Status: Funcionando', tooltip: 'Iluminação', tipo: 'light' },
+    { lat: -23.5300, lng: -46.6200, icon: iconLight, popup: '<b>Poste Inteligente</b><br>Status: Manutenção', tooltip: 'Iluminação', tipo: 'light' },
+    { lat: -23.5600, lng: -46.6400, icon: iconLight, popup: '<b>Poste Inteligente</b><br>Status: Funcionando', tooltip: 'Iluminação', tipo: 'light' },
+
+    // Wi-Fi público
+    { lat: -23.5500, lng: -46.6200, icon: iconWifi, popup: '<b>Wi-Fi Público</b><br>Usuários conectados: 120', tooltip: 'Wi-Fi', tipo: 'wifi' },
+    { lat: -23.5800, lng: -46.6600, icon: iconWifi, popup: '<b>Wi-Fi Público</b><br>Usuários conectados: 80', tooltip: 'Wi-Fi', tipo: 'wifi' },
+    { lat: -23.5400, lng: -46.6400, icon: iconWifi, popup: '<b>Wi-Fi Público</b><br>Usuários conectados: 60', tooltip: 'Wi-Fi', tipo: 'wifi' },
+
+    // Bombeiros
+    { lat: -23.5600, lng: -46.6500, icon: iconFire, popup: '<b>Bombeiros</b><br>Equipe disponível', tooltip: 'Bombeiros', tipo: 'fire' },
+    { lat: -23.5700, lng: -46.6600, icon: iconFire, popup: '<b>Bombeiros</b><br>Equipe em atendimento', tooltip: 'Bombeiros', tipo: 'fire' },
+
+    // Polícia
+    { lat: -23.5700, lng: -46.6200, icon: iconPolice, popup: '<b>Delegacia</b><br>Status: Operando', tooltip: 'Polícia', tipo: 'police' },
+    { lat: -23.5600, lng: -46.6300, icon: iconPolice, popup: '<b>Delegacia</b><br>Status: Plantão', tooltip: 'Polícia', tipo: 'police' }
+  ];
+
+  // Array para guardar os marcadores Leaflet
+  let marcadores = [];
+
+  // Função para renderizar marcadores conforme filtros
+  function renderizarMarcadores() {
+    // Remove marcadores antigos
+    marcadores.forEach(m => map.removeLayer(m));
+    marcadores = [];
+    // Pega filtros ativos
+    const filtros = Array.from(document.querySelectorAll('.filtro-mapa:checked')).map(el => el.value);
+    pontos.forEach(p => {
+      if (filtros.includes(p.tipo)) {
+        const marker = L.marker([p.lat, p.lng], { icon: p.icon })
+          .addTo(map)
+          .bindPopup(p.popup)
+          .bindTooltip(p.tooltip, { direction: 'top' });
+        marcadores.push(marker);
+      }
+    });
+  }
+
+  // Inicializa marcadores
+  renderizarMarcadores();
+
+  // Atualiza marcadores ao mudar filtros
+  document.querySelectorAll('.filtro-mapa').forEach(el => {
+    el.addEventListener('change', renderizarMarcadores);
+  });
+  </script>
+
+  <!-- Gráficos -->
+  <script>
+    // Botão de mostrar/esconder dashboard
+    const dashboardContent = document.getElementById('dashboard-content');
+    const toggleBtn = document.getElementById('toggle-dashboard');
+    let dashboardVisible = true;
+
+    toggleBtn.addEventListener('click', () => {
+      dashboardVisible = !dashboardVisible;
+      dashboardContent.style.display = dashboardVisible ? 'block' : 'none';
+      toggleBtn.textContent = dashboardVisible ? 'Esconder Dashboard' : 'Mostrar Dashboard';
+    });
+
+    // Função para criar gráficos
+    function createBarChart(ctx, label, data, color) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Hoje'],
+          datasets: [{
+            label: label,
+            data: data,
+            backgroundColor: color,
+            borderColor: color,
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: 'rgba(255, 255, 255, 0.1)' },
+              ticks: { color: '#cbd5e1' }
+            },
+            x: {
+              ticks: { color: '#cbd5e1' },
+              grid: { display: false }
+            }
+          },
+          plugins: {
+            legend: { labels: { color: '#cbd5e1' } }
+          }
+        }
+      });
+    }
+
+    // Gráficos principais
+    createBarChart(document.getElementById('chartAr').getContext('2d'), 'PM2.5 (μg/m³)', [42], '#3b82f6');
+    createBarChart(document.getElementById('chartLixo').getContext('2d'), 'Toneladas', [2.1], '#16a34a');
+    createBarChart(document.getElementById('chartEnergia').getContext('2d'), 'kWh', [120], '#f59e0b');
+    createBarChart(document.getElementById('chartSaude').getContext('2d'), 'Pessoas', [34], '#8b5cf6');
+
+    // Novos gráficos
+    createBarChart(document.getElementById('chartAgua').getContext('2d'), 'Água (m³)', [850], '#0ea5e9');
+    createBarChart(document.getElementById('chartTransito').getContext('2d'), 'Tempo (min)', [32], '#ef4444');
+    createBarChart(document.getElementById('chartWifi').getContext('2d'), 'Usuários', [260], '#2563eb');
+    createBarChart(document.getElementById('chartSeguranca').getContext('2d'), 'Ocorrências', [5], '#e11d48');
+  </script>
+
+  <!-- Formulários -->
+  <script>
+    document.getElementById('form-engajamento').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Cadastro realizado com sucesso! Você ganhou 50 pontos de sustentabilidade.');
+      e.target.reset();
+    });
+
+    document.getElementById('form-parceria').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Sua proposta foi enviada! Em breve entraremos em contato.');
+      e.target.reset();
+    });
+  </script>
+
+</body>
+</html>
